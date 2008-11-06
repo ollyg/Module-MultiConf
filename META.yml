@@ -1,0 +1,12 @@
+name:         Module-MultiConf
+version:      '0.0301'
+version_from: lib/Module/MultiConf.pm
+installdirs:  site
+requires:
+    Config::Any: 0
+    Params::Validate: 0
+    Class::Data::Inheritable: 0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30_01
+

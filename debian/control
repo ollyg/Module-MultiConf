@@ -1,0 +1,30 @@
+Source: libmodule-multiconf-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 5.0.0)
+Build-Depends-Indep: perl (>= 5.8.8-7)
+Maintainer: Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>
+Standards-Version: 3.7.2
+
+Package: libmodule-multiconf-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libconfig-any-perl, libparams-validate-perl, libclass-data-inheritable-perl
+Description:  Configure and validate all your app modules in one go
+ This module might allow you to manage better your application configuration,
+ if most of the config is actually for other modules which you use. The essence
+ here is that you store all that config in one place, probably an external
+ file.
+ .
+ You can optionally use a validation specification, as described by
+ Params::Validate, to check you are not missing anything when the config is
+ loaded or passed around.
+ .
+ The interface to the stored config provides an object method per blob of
+ configuration, which returns a reference to the hash of that blob's content.
+ .
+ This release is just an initial version, more documentation will follow once
+ the interface has been stabalized. For now, please look at the tests which
+ should show you what to do. It would also be worth reading the
+ Params::Validate and Config::Any manual pages and the included example files.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
