@@ -1,19 +1,16 @@
-use 5.008004;
-use ExtUtils::MakeMaker;
+use inc::Module::Install 0.67;
+perl_version '5.008001';
+  
+name        'Module-MultiConf';
+all_from    'lib/Module/MultiConf.pm';
 
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
+requires    'Config::Any' => 0;
+requires    'Params::Validate' => 0;
+requires    'Class::Data::Inheritable' = 0;
 
-WriteMakefile(
-    NAME              => 'Module::MultiConf',
-    VERSION_FROM      => 'lib/Module/MultiConf.pm', # finds $VERSION
-    PREREQ_PM         => {
-        Config::Any => 0,
-        Params::Validate => 0,
-        Class::Data::Inheritable => 0,
-    },
-    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT       => 'Configure and validate your app modules in one go',
-       AUTHOR         => 'Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>') : ()),
-);
+test_requires  'Test::More' => 0;
+test_requires  'Test::Pod' => 0;
+test_requires  'Test::Pod::Coverage' => 0;
+
+WriteAll;
 

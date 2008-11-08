@@ -1,3 +1,10 @@
+libmodule-multiconf-perl (1.0401-1) UNRELEASED; urgency=low
+
+  * Move to Module::Install
+  * Fix MANIFEST file
+
+ -- Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>  Sat,  8 Nov 2008 16:31:44 +0000
+
 libmodule-multiconf-perl (0.0301-1) unstable; urgency=low
 
   * Options in validate_with can now be poked by calling module
