@@ -6,7 +6,7 @@ all_from    'lib/Module/MultiConf.pm';
 
 requires    'Config::Any' => 0;
 requires    'Params::Validate' => 0;
-requires    'Class::Data::Inheritable' = 0;
+requires    'Class::Data::Inheritable' => 0;
 
 test_requires  'Test::More' => 0;
 test_requires  'Test::Pod' => 0;
